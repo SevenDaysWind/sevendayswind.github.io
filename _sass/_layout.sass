@@ -4,7 +4,7 @@
     left: 0
     right: 0
     z-index: 999
-    min-height: $spacing-unit
+    padding: $spacing-unit / 2
     a
         &:hover, &:focus
             text-decoration: none
@@ -19,6 +19,8 @@
     margin-top: 0
     margin-bottom: 0
     float: left
+    border-radius: 500px
+    overflow: hidden
 
     +media-query($on-laptop)
         max-width: 150px
@@ -107,6 +109,11 @@
     padding: $spacing-unit / 2 0
     color: #fff
     background-image: linear-gradient(transparent, #000)
+    a
+        &:hover, &:focus, &:active
+            color: #fff
+            background-color: #000
+            text-decoration: none
 
 .footer-heading
     font-size: 18px
