@@ -1,4 +1,6 @@
-_site/
-.sass-cache/
-.jekyll-cache/
+_www
+_server
+_site
+.sass-cache
 .jekyll-metadata
+desktop.ini

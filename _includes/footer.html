@@ -1,0 +1,28 @@
+<footer class="site-footer">
+
+  <div class="wrapper" data-grid="spacing">
+
+    <div data-cell="1of3">
+      <h2 class="footer-heading">{{ site.title }}</h2>
+      <p>{{ site.description }}</p>
+    </div>
+
+    <div data-cell="1of4">
+      <ul class="seamless">
+        {% for tel in site.whatsapp %}
+          <li><a href="tel:{{ tel[1] }}">{{ tel[0] }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div data-cell="shrink">
+      <ul class="seamless">
+        {% for link in site.social %}
+          <li><a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+
+</footer>

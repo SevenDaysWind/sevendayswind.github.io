@@ -1,0 +1,155 @@
+.site-header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 999
+    min-height: $spacing-unit
+    a
+        &:hover, &:focus
+            text-decoration: none
+            color: #fff
+.site-title
+    font:
+        size: 26px
+        weight: 600
+        family: $title-font-family
+    line-height: 56px
+    letter-spacing: 1px
+    margin-top: 0
+    margin-bottom: 0
+    float: left
+
+.site-nav
+    float: right
+    line-height: 56px
+    .menu-icon
+        display: none
+    .page-link
+        font:
+            family: $ui-font-family
+            size: 14px
+        text-transform: uppercase
+        letter-spacing: 1px
+        line-height: $spacing-unit
+        margin-left: 20px
+    +media-query($on-palm)
+        position: absolute
+        top: 9px
+        z-index: 999
+        right: 9px
+        text-align: right
+        overflow: hidden
+        transform: translate(0)
+        transition: .3s ease-in-out
+        &:hover
+            .menu-icon
+                opacity: .5
+                transform: scale(.5)
+            .trigger
+                clear: both
+                display: block
+                padding: 25px 0
+                background-color: $grey-color-dark
+                border-radius: 5px
+        .menu-icon
+            // display: block
+            float: right
+            width: 36px
+            height: 36px
+            line-height: 0
+            padding-top: 10px
+            text-align: center
+            transition: .3s ease-in-out
+            &:before
+                content: initial
+            > svg
+                width: 18px
+                height: 15px
+                color: inherit
+                path
+                    fill: currentcolor
+        .trigger
+            display: none
+        .page-link
+            display: block
+            padding: 0 50px
+            margin: 0
+            line-height: 50px
+            opacity: 0
+            &:hover, &:focus, &:active
+                background-color: #000
+            @for $i from 1 through 10
+                &:nth-of-type(#{$i})
+                    animation: enter-from-right .4s .1s * ($i - 1) ease-in-out forwards
+            @keyframes enter-from-right
+                0%
+                    opacity: 0
+                    transform: translate(150px)
+                100%
+                    opacity: 1
+                    transform: translate(0)
+
+.site-footer
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 999
+    min-height: $spacing-unit
+    font-size: $small-font-size
+    padding: $spacing-unit / 2 0
+    color: #fff
+    background-image: linear-gradient(transparent, #000)
+
+.footer-heading
+    font-size: 18px
+    margin-bottom: $spacing-unit / 2
+
+.page-content
+    padding-top: $spacing-unit
+    padding-bottom: $spacing-unit
+
+.page-heading
+    font-size: 20px
+
+.post-list
+    margin-left: 0
+    list-style: none
+    > li
+        margin-bottom: $spacing-unit
+    .post-title
+        margin-top: 0
+        margin-bottom: 10px
+
+.post-meta
+    font-size: $small-font-size
+    color: $grey-color
+
+.post-link
+    display: block
+    font-size: 24px
+    line-height: 1.1
+
+.post-excerpt
+    font-size: $small-font-size
+    margin-top: 10px
+
+.post-header
+    margin-bottom: $spacing-unit
+
+.post-title
+    letter-spacing: -1px
+    line-height: 1.1
+
+.post-content
+    margin-bottom: $spacing-unit
+    >
+        h1, h2, h3, h4, h5, h6,
+        p, pre, blockquote, ul, ol, dl, figure
+            @extend .wrapper
+
+        ul, ol
+            +media-greater($on-palm)
+                padding-left: $spacing-unit * 1.5
+

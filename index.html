@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+{% for section in site.sections %}
+<section class="page-content {{ section.class }} section-{{ section.name }}" id="{{ section.name }}">
+  {{ section.content }}
+</section>
+{% endfor %}
