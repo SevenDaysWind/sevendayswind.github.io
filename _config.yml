@@ -1,20 +1,6 @@
 ---
 title: Seven Days Wind
 timezone: UTC
-description: >
-  Descrição
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sevendayswind.com" # the base hostname & protocol for your site
-social:
-  facebook: http://facebook.com/sevendayswind
-  instagram: http://instagram.com/sevendayswind
-  youtube: http://youtube.com/sevendayswind
-  soundcloud: http://soundcloud.com/sevendayswind
-spotify: seven days wind
-whatsapp:
-  +55 (13) 99773-3107: '+5513997733107'
-  +55 (11) 99729-2555: '+5511997292555'
-
 collections:
   posts:
     title: Posts
@@ -22,25 +8,35 @@ collections:
   uploads:
     title: Uploads
     output: true
-
 defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: page
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+description: 'Descrição
 
-# Build settings
-exclude: 
-  - gulpfile.js
-  - README.md
-  - desktop.ini
+'
+baseurl: ''
+url: https://sevendayswind.com
+social:
+  facebook: http://facebook.com/sevendayswind
+  instagram: http://instagram.com/sevendayswind
+  youtube: http://youtube.com/sevendayswind
+  soundcloud: http://soundcloud.com/sevendayswind
+spotify: seven days wind
+whatsapp:
+  "+55 (13) 99773-3107": "+5513997733107"
+  "+55 (11) 99729-2555": "+5511997292555"
+exclude:
+- gulpfile.js
+- README.md
+- desktop.ini
 markdown: kramdown
-
 sass:
   style: compressed
