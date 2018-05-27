@@ -12,7 +12,6 @@ body
     color: $text-color
     background-color: $background-color
     background:
-        image: url('/img/gran-background.jpg')
         position: top center
         size: cover
     -webkit-text-size-adjust: 100%
@@ -22,6 +21,10 @@ body
     font-feature-settings: "kern" 1
     font-kerning: normal
     box-sizing: border-box
+    +media-greater($on-palm)
+        background-image: url('/img/gran-background.jpg')
+    +media-query($on-palm)
+        background-image: url('/img/small-background.jpg')
     *
         box-sizing: inherit
 

@@ -1,14 +1,13 @@
 <footer class="site-footer">
 
-  <div class="wrapper" data-grid="spacing">
+  <div class="wrapper" data-grid="end spacing">
 
     <div data-cell="1of3">
       <h2 class="footer-heading">{{ site.title }}</h2>
-      <p>{{ site.description }}</p>
     </div>
 
     <div data-cell="1of4">
-      <ul class="seamless">
+      <ul class="seamless contact">
         {% for tel in site.whatsapp %}
           <li><a href="tel:{{ tel[1] }}">{{ tel[0] }}</a></li>
         {% endfor %}
@@ -26,3 +25,12 @@
   </div>
 
 </footer>
+
+<script>
+document.querySelector(
+  '.site-footer .contact'
+).insertAdjacentHTML(
+  'afterEnd',
+  '<ul class="seamless"><li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li></ul>'
+)
+</script>

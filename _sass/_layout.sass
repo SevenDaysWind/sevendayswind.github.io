@@ -19,14 +19,16 @@
     margin-top: 0
     margin-bottom: 0
     float: left
-    border-radius: 500px
-    overflow: hidden
-
-    +media-query($on-laptop)
-        max-width: 150px
 
     +media-query($on-palm)
         max-width: 100px
+
+    +media-greater($on-palm)
+        float: right
+
+    +media-greater($content-width)
+        img
+            width: 300px
 
 .site-nav
     float: right
@@ -109,6 +111,15 @@
     padding: $spacing-unit / 2 0
     color: #fff
     background-image: linear-gradient(transparent, #000)
+    overflow: auto
+    +media-query($on-laptop)
+        .footer-heading, ul
+            margin: 0
+            + p
+                margin-top: 0
+    +media-query($on-palm)
+        top: 0
+        background-image: linear-gradient(to right, transparent, #000)
     a
         &:hover, &:focus, &:active
             color: #fff
