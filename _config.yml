@@ -22,13 +22,13 @@ defaults:
 description: 'Descrição
 
 '
-baseurl: ''
+baseurl: 
 url: https://sevendayswind.com
 email: 7dayswind@gmail.com
 social:
   facebook: http://facebook.com/sevendayswind
   instagram: http://instagram.com/sevendayswind
-  youtube: http://youtube.com/sevendayswind
+  youtube: http://youtube.com/windsondantas
   soundcloud: http://soundcloud.com/sevendayswind
   spotify: https://open.spotify.com/artist/6KWPp7jtiiVG1iav7AUwrY
 whatsapp:
