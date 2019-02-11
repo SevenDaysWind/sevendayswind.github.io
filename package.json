@@ -1,0 +1,13 @@
+{
+  "name": "sevendayswind.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SevenDaysWind/sevendayswind.github.io",
+  "author": "johnylab <joaobatistacomunic@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "child_process": "^1.0.2",
+    "gulp": "^4.0.0"
+  }
+}
